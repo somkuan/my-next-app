@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 import {
   Card,
@@ -110,6 +111,35 @@ export default function AboutPage() {
                 </ul>
               </CardContent>
             </Card>
+          </div>
+
+          <div className="container mx-auto px-4 py-16">
+            <h1 className="text-3xl font-bold mb-8">
+              ตัวอย่างรูปภาพจาก Remote URL
+            </h1>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="relative h-64 rounded-lg overflow-hidden">
+                <Image
+                  src="https://images.unsplash.com/photo-1593642532842-98d0fd5ebc1a"
+                  alt="Laptop on desk"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                  priority
+                />
+              </div>
+
+              <div className="relative h-64 rounded-lg overflow-hidden">
+                <Image
+                  src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f"
+                  alt="Modern technology"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
