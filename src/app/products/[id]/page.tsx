@@ -1,4 +1,5 @@
 // app/products/[id]/page.tsx
+import AddToCartButton from "@/components/add-to-cart-button";
 import { Metadata } from "next";
 import Image from "next/image";
 
@@ -114,6 +115,12 @@ export default async function ProductDetailPage({
               </p>
             </div>
           )}
+
+          <AddToCartButton
+            productId={product.id}
+            productName={product.name}
+            productPrice={product.price || 0}
+          />
         </div>
       </div>
     </main>
